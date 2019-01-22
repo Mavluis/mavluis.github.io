@@ -8,18 +8,18 @@ miImage.onclick = function () {
     }
 }
 var miBoton = document.querySelector('button');
-var miTitulo = document.querySelector( 'h1');
+var miTitulo = document.querySelector( 'h3');
 function estableceNombreUsuario() {
-    var miNombre = prompt('Por favor, pon tu nombre.');
+    var miNombre = prompt('Por favor, pon tu nombre:');
     localStorage.setItem('nombre', miNombre);
-    miTitulo.textContent = 'Esta es la vida real,' + miNombre;
+    miTitulo.textContent = 'Esta es la vida real, ' + miNombre;
 }
 if (!localStorage.getItem('nombre')) {
     estableceNombreUsuario();
 }
 else {
     var nombreAlmacenado = localStorage.getItem('nombre');
-    miTitulo.textContent = 'Has repetido,' + nombreAlmacenado;
+    miTitulo.textContent = 'Has repetido, ' + nombreAlmacenado;
 }
 miBoton.onclick = function() {
     estableceNombreUsuario();
