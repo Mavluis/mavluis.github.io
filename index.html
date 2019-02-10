@@ -13,10 +13,23 @@
 <p>Mi hijo es <strong>muy bueno.</strong></p>
 <h1>Welcome to The Real World!!!</h1>
 <h2></h2>
+<h3></h3>
 <br>
 <div align="left"><a href="juego.html"><img src="images/game.png" style="float: left;" width="30px" title="Pincha para jugar!!!"></a>Pincha para jugar!!!</div>
-<br><br>
-<h3></h3>
+<br>
+
+<br>Calculadora<br>
+<input type="number" id="n1"/><br>
+<input type="number" id="n2"/><br><br>
+<select id="operators">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<button onclick="calc();">=</button>
+<input type="" id="result">
+
 <br>
 <p>
     Vamos a usar:
@@ -38,9 +51,8 @@
 <footer><div align="center">
 <a href="http://www.otrasno.com/"title="Tienda licores y algo mas....">Pincha aqui para ver mas....</a>
 <p></p>
-<button>Cambiar de user</button></footer>
-<script src="scripts/main.js"></script></div>
-<div align="center"><button>Pinchame</button>
-<script src="scripts/pinchame.js"></script></div>
+<button onclick="estableceNombreUsuario();">Cambio de User</button></footer>
+<div align="center"><button onclick="createParagraph();">Pinchame</button>
+  <script src="scripts/main.js"></script></div>
   </body>
 </html>

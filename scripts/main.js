@@ -7,8 +7,35 @@ miImage.onclick = function () {
       miImage.setAttribute('src', 'images/logo-hack-abos-horizontal.png');
     }
 }
-var miBoton = document.querySelector('button');
-var miTitulo = document.querySelector( 'h3');
+
+function calc()
+{
+    var n1 = parseFloat(document.getElementById('n1').value);
+    var n2 = parseFloat(document.getElementById('n2').value);
+    var oper = document.getElementById('operators').value;
+    if(oper === '+')
+    {
+        document.getElementById('result').value = (n1+n2).toFixed(2);
+    }
+    
+    if(oper === '-')
+    {
+        document.getElementById('result').value = (n1-n2).toFixed(2);
+    }
+    
+    if(oper === '*')
+    {
+        document.getElementById('result').value = (n1*n2).toFixed(2);
+    }
+    
+    if(oper === '/')
+    {
+        document.getElementById('result').value = (n1/n2).toFixed(2);
+    }
+}
+
+var miBoton = document.querySelector('button1');
+var miTitulo = document.querySelector('h3');
 function estableceNombreUsuario() {
     var miNombre = prompt('Por favor, pon tu nombre:');
     localStorage.setItem('nombre', miNombre);
@@ -24,3 +51,15 @@ else {
 miBoton.onclick = function() {
     estableceNombreUsuario();
 }
+
+function createParagraph() {
+    var para = document.createElement('p');
+    para.textContent = 'Has pinchado en el botón!!!';
+    document.body.appendChild(para);
+  }
+  
+  var buttons = document.querySelectorAll('button');
+  
+  for (var i = 0; i < buttons.length ; i++) {
+    buttons[i].addEventListener('onclick', createParagraph);
+  }
