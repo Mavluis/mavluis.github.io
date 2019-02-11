@@ -82,3 +82,8 @@ li:hover {
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
+
+.juego{
+  flex-wrap: unset; 
+  padding-left: 8rem; 
+}
